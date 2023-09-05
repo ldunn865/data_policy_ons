@@ -1,0 +1,38 @@
+repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v4.0.1
+    hooks:
+      - id: check-added-large-files
+      - id: check-docstring-first
+      - id: check-json
+      - id: check-xml
+      - id: check-yaml
+      - id: debug-statements
+      - id: detect-private-key
+      # - id: no-commit-to-branch
+      #   args: ['--branch', 'master', '--pattern', '^(?!((hotfix|feature|bug)-[a-zA-Z-]{1,4}-[0-9]{1,4})).*']
+
+  - repo: 'https://github.com/kynan/nbstripout'
+    rev: 0.5.0
+    hooks:
+      - id: nbstripout
+
+  # - repo: 'https://github.com/psf/black'
+  #rev: 22.12.0
+  #hooks:
+  #- id: black
+  #- id: black-jupyter
+
+  #- repo: 'https://github.com/pycqa/flake8'
+  #rev: 4.0.1
+  #hooks:
+  #- id: flake8
+  #args: ['--ignore=E203,E266,E402,E501,W503,F401,F403', # https://lintlyci.github.io/Flake8Rules/
+  #       '--max-line-length=88',
+  #       '--max-complexity=18',
+  #       '--select=B,C,E,F,W,T4,B9']
+
+  #- repo: https://github.com/lorenzwalthert/precommit
+  # rev: v0.3.2
+  # hooks: 
+  # -   id: style-files
