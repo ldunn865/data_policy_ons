@@ -1,10 +1,13 @@
 from typing import List, Tuple
 
 import pandas as pd
+import plotly
 import plotly.express as px
 import streamlit as st
 import datetime
-
+import re
+import requests
+import os
 
 def set_page_config():
     st.set_page_config(
@@ -17,8 +20,23 @@ def set_page_config():
 
 
 @st.cache_data
-def load_data() -> pd.DataFrame:
-    data = pd.read_csv("../data/processed/CPIH_and_CPI_df.csv")
+def run_main():
+    
+    with open("notebooks/main.py") as f:
+        code = f.read()
+    # Create a dictionary to hold the global variables
+    global_vars = {}
+    # Execute the code with the global variables dictionary
+    exec(code, global_vars)
+    # Call the generate_dataframe function from main.py
+    df = global_vars.get('run')()
+    return df
+
+
+
+@st.cache_data
+def load_data(data_from_main) -> pd.DataFrame:
+    data = data_from_main
     data["Date"] = pd.to_datetime(data["Date"])
     return data
 
@@ -129,8 +147,16 @@ def display_charts(data: pd.DataFrame):
 
 def main():
     set_page_config()
+    
+    
+    #if __name__ == '__main__':
+     #   result_df = run_main()
+      #  st.dataframe(result_df)
+        
+    result_df = run_main()
 
-    data = load_data()
+
+    data = load_data(result_df)
 
     st.title(
         "The Consumer Prices Index including owner occupiers' housing costs by division levels"
