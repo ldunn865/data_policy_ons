@@ -1,24 +1,15 @@
 # cookiecutter-repo_name
  
-Project contact: [*project_contact_email*](mailto:*project_contact_email*)
+Project contact: [*lauren.dunn@ukhsa.gov.uk*](mailto:*project_contact_email*)
 
-[![pre-commit](https://github.com/ukhsa-internal/ukhsa-project-template/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/ukhsa-internal/ukhsa-project-template/actions/workflows/pre-commit.yml)
 
 ## PURPOSE
-*include a purpose for your repository*
+This repo shows how CPIH and CPI at division level has changed over time. The results are shown on a interactive dashboard which the user can filter for date, dataset and division level. 
 
 ## GUIDANCE/ GROUND RULES
-1.  Store notebooks in the `notebooks` folders based on thematic labelling e.g. "Project_name", "theme_x", (...).
-2.  Within a thematic folder, only notebooks should be stored and they should be named as per the convention above.
-3.  Notebooks should be cleared of output before committing. This is enforced by default on Dash with checks using pre-commit and github actions. (Further details below)
-4.  No data, output or blob files (.DOC, .XLS, .PDF, .HTML, .PNG, .JPEG or .SVG) should ever enter the repository.
-5.  Any raw or intermediate data files created should be stored in the `data` folder. No CSV/RDS/JSON/favourite_data_format in any folder aside `data`. 
-6.  All outputs (e.g images containing graphs etc) should be stored into the `outputs` folder or preferable written to *S3*.
-7.  The default location for outputs or objects (images, models etc) that need to be persisted and shared is *S3*.
-8.  All `.py` or `.R` files should be stored in `src`.
-9.  Pytest is the preferred test framework.  All tests should be stored in the tests folder and contained in files beginning `test_XXX.py` so that they can be detected by pytest. (Further details below)
-10. The folder `models` can be deleted if not required.
-11. Pushing to *master* should be disabled and code reviewed by a peer before entering main.
+
+1) Run main.ipynb
+2) Change to notebooks then type into the terminal streamlit run app.py 
 
 
 ## Project Organization
