@@ -8,8 +8,9 @@ This repo shows how CPIH and CPI at division level has changed over time. The re
 
 ## GUIDANCE/ GROUND RULES
 
-1) Run main.ipynb
-2) Change to notebooks then type into the terminal streamlit run app.py 
+1) Install packages using requirements.txt
+2) Run main.ipynb
+3) Change to notebooks then type into the terminal streamlit run app.py 
 
 
 ## Project Organization
