@@ -18,7 +18,7 @@ def set_page_config():
 
 @st.cache_data
 def load_data() -> pd.DataFrame:
-    data = pd.read_csv("../data/processed/CPIH_and_CPI_df.csv")
+    data = pd.read_csv("data/processed/CPIH_and_CPI_df.csv")
     data["Date"] = pd.to_datetime(data["Date"])
     return data
 
