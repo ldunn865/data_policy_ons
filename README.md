@@ -1,7 +1,5 @@
 # cookiecutter-repo_name
  
-Project contact: [*lauren.dunn@ukhsa.gov.uk*](mailto:*project_contact_email*)
-
 
 ## PURPOSE
 This repo shows how CPIH and CPI at division level has changed over time. The results are shown on a interactive dashboard which the user can filter for date, dataset and division level. 
